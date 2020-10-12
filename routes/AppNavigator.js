@@ -8,10 +8,27 @@ import ReviewDetails from "../screens/ReviewDetails";
 const { Navigator, Screen } = createStackNavigator();
 
 const HomeNavigator = () => (
-  <Navigator>
-    <Screen name="Home" component={Home} />
-    <Screen name="About" component={About} />
-    <Screen name="Details" component={ReviewDetails} />
+  <Navigator
+    screenOptions={{
+      headerStyle: { backgroundColor: "#eee" },
+      headerTintColor: '#444'
+    }}
+  >
+    <Screen
+      name="Home"
+      component={Home}
+      options={{
+        title: "GameZone",
+      }}
+    />
+    {/* <Screen name="About" component={About} /> */}
+    <Screen
+      name="Details"
+      component={ReviewDetails}
+      options={{
+        title: "Review Details",
+      }}
+    />
   </Navigator>
 );
 
